@@ -58,11 +58,7 @@ function isSomeTrue(array, fn) {
     throw new Error('fn is not a function');
   }
 
-  if (array.constructor.name !== 'Array') {
-    throw new Error('empty array');
-  }
-
-  if (!array.length) {
+  if (!(array instanceof Array) || array.length === 0) {
     throw new Error('empty array');
   }
 
